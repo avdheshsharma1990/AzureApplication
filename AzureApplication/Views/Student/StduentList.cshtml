@@ -1,0 +1,29 @@
+﻿@model List<AzureApplication.Context.tbl_Student>
+@{
+    ViewBag.Title = "StduentList";
+}
+
+<h2>StduentList</h2>
+
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Fname</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Fname</td>
+            <td>@item.Email</td>
+            <td>@item.Mobile</td>
+            <td>@item.Description</td>
+            <td><a href="#" class="glyphicon glyphicon-pencil"></a></td>
+            <td><a href="#" class="glyphicon glyphicon-trash"></a></td>
+        </tr>
+    }
+</table>
